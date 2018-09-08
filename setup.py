@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='ghostlord',
     packages=['ghostbin'],
-    version='1.3.2',
+    version='1.3.3',
     author='Gurkirat',
     author_email='tbhaxor@gmail.com',
     url='https://tbhaxor.me/ghostlord',
