@@ -10,6 +10,7 @@ setup(
     download_url='https://github.com/tbhaxor/ghostlord/archive/master.zip',
     description='A slim line ghost bin api',
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     license='MIT',
     install_requires=['cfscrape', 'randua'],
     keywords='ghostbin, ghostlord, tbhaxor, api',
