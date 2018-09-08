@@ -1,11 +1,7 @@
-from argparse import ArgumentParser, RawTextHelpFormatter, RawDescriptionHelpFormatter
 from cfscrape import create_scraper
 from randua import generate as genua
 import json
-import os
 from os import path
-from sys import exit
-from urllib.parse import quote
 
 
 class GhostBin:
@@ -54,8 +50,7 @@ class GhostBin:
 
         # if found authenticate in url wihout password - password protected and need password
         if r.url.endswith("authenticate") and password == "":
-            print("This paste is password protected")
-            exit(1)
+            raise Exception("This paste is password protected")
         # if found authenticate in url with password entered
         elif r.url.endswith("authenticate") and password != "":
             # validating the paste
@@ -65,8 +60,7 @@ class GhostBin:
 
             # if still it has authenticate then wrong pass
             if "authenticate" in pr.url:
-                print("Wrong password")
-                exit(1)
+                raise Exception("wrong password")
             else:
                 # otherwise getting the raw content
                 r = self.scrape.get(pr.url + "/raw", headers=self.headers)
