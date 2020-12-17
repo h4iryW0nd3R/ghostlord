@@ -1,5 +1,7 @@
 # GhostLord
 
+> The project is not maintained
+
 Ghost-Lord is the cli version of web based pasting service [GHOSTBIN](https://ghostbin.com). This
 program allows you to put and recieve pastes from ghostbin with the help of terminal.
 
